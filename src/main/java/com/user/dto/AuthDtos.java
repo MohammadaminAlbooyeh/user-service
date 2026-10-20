@@ -50,7 +50,17 @@ public class AuthDtos {
     @Builder
     public static class AuthResponse {
         private String token;
+        private String refreshToken;
         private UserDto user;
+    }
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class RefreshRequest {
+        @NotBlank
+        private String refreshToken;
     }
 
     @Data
